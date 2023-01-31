@@ -1,0 +1,46 @@
+@import '../../../variaveis';
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  list-style: none;
+  margin: 16px;
+
+  &__name {
+    border: 1px solid $color-black;
+    padding: 16px;
+    color: $color-black;
+    font-size: 30px;
+    line-height: 36px;
+    cursor: pointer;
+    width: 50%;
+
+    @media #{$mq-tablet}, #{$mq-mobile} {
+      width: calc(100% - 32px);
+    }
+
+    &:hover {
+      color: $color-yellow;
+    }
+  }
+
+  &__list-tag {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    list-style: none;
+    margin-top: 16px;
+
+    &__tags {
+      color: $color-black;
+    }
+  }
+
+}
+
+

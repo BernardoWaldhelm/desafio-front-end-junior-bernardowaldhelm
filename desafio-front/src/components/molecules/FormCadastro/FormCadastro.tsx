@@ -1,5 +1,5 @@
-const FaleConosco = () => {
-  <div>Hello</div>;
+const FormCadastro = () => {
+  return <div>Hello</div>;
 };
 
-export default FaleConosco;
+export { FormCadastro };
