@@ -1,0 +1,27 @@
+@import "../../../variaveis";
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  gap: 30px;
+  background: linear-gradient(90deg,rgb(21,31,41) 30%,rgb(15, 1, 27) 93%);
+
+  &__link {
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover{
+      color: $color-yellow;
+      transition: all 0.5s;
+    }
+  }
+
+  img {
+    width: 120px;
+    @media #{$mq-tablet}, #{$mq-mobile} {
+      width: 60px;
+    }
+  }
+}
