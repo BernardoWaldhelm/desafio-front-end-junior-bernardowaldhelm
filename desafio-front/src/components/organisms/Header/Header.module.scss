@@ -1,0 +1,39 @@
+@import '../../../variaveis';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: $color-black;
+  color: $color-white;
+  padding: 10px 30px;
+
+  .header-link__list {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    &__items-menu {
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.5s;
+
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+  }
+
+  .header-logo {
+    height: auto;
+
+    &__img {
+      width: 120px;
+
+      @media #{$mq-tablet}, #{$mq-mobile} {
+        width: 60px;
+      }
+    }
+  }
+}
