@@ -6,33 +6,105 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    height: 100vh;
 
     @media #{$mq-tablet}, #{$mq-mobile} {
         width: 100%;
     }
 
-    &__wrapper {
-        width: 50%;
-        position: relative;
+    &__navigate {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+      padding-left: 30px;
 
-        @media #{$mq-tablet}, #{$mq-mobile} {
-            width: 100%;
+      &__button {
+        width: auto;
+        min-width: 70px;
+        height: 40px;
+        border: 1px solid black;
+        background: transparent;
+        cursor: pointer;
+
+
+        &:hover {
+          background: #292929;
+          color: $color-white;
         }
+
+        &:active {
+          background: $color-black;
+          color: $color-white;
+        }
+
+      }
+    }
+
+    &__button__back-go {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+
+      &__button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        height: 40px;
+        background-color: $color-black;
+        border: none;
+        border-radius: 10px;
+        color: $color-white;
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: 0.05em;
+        cursor: pointer;
+
+        @media #{$mq-desktop}, #{$mq-tablet}, #{$mq-mobile} {
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        &:hover {
+          background: #292929;
+          color: $color-white;
+        }
+
+        &:active {
+          background: $color-black;
+          color: $color-white;
+        }
+      }
+    }
+
+    &__wrapper {
+        width: 100%;
+        position: relative;
 
         &__success {
             bottom: -30px;
             font-family: $font-family;
             font-style: normal;
             font-weight: 400;
-            font-size: 24px;
-            line-height: 28px;
+            font-size: 38px;
+            line-height: 42px;
             color: $color-success;
 
             @media #{$mq-desktop}, #{$mq-tablet}, #{$mq-mobile} {
                 bottom: -20px;
-                font-size: 12px;
-                line-height: 14px;
+                font-size: 16px;
+                line-height: 22px;
             }
         }
     }
@@ -83,7 +155,7 @@
 
         input {
             border: 1px solid $color-black;
-            border-radius: 25px;
+            border-radius: 10px;
             width: calc(100% - 40px);
             height: 31px;
             padding: 15px 20px;
@@ -162,7 +234,7 @@
         input {
             width: 36.4px;
             height: 35.15px;
-            border-radius: 3px;
+            border-radius: 10px;
             border: 1px solid $color-black;
             cursor: pointer;
 
@@ -191,16 +263,52 @@
         }
     }
 
+    &__modal {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: #292929da;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__center{
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: rgba(255, 255, 255, 0.842);
+        position: relative;
+
+        &__button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: transparent;
+          color: $color-success;
+          border: none;
+          font-size: 30px;
+          cursor: pointer;
+        }
+      }
+    }
+
     &__button {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
-        height: 71px;
+        width: 50%;
+        height: 40px;
         background-color: $color-black;
         border: none;
-        border-radius: 25px;
+        border-radius: 10px;
         color: $color-white;
         font-family: $font-family;
         font-style: normal;
@@ -208,11 +316,10 @@
         font-size: 32px;
         line-height: 38px;
         letter-spacing: 0.05em;
-        text-transform: uppercase;
         cursor: pointer;
+        margin-top: 16px;
 
         @media #{$mq-desktop}, #{$mq-tablet}, #{$mq-mobile} {
-            height: 52px;
             font-size: 16px;
             line-height: 19px;
         }
