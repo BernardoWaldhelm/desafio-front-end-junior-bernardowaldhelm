@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://cataas.com/api/cats",
+  baseURL: "/cats-offline.json",
 });
 
 export default api;

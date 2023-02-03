@@ -8,8 +8,11 @@
   gap: 20px;
   list-style: none;
   margin: 16px;
+  height: 100vh;
+  padding-bottom: 32px;
 
   &__name {
+    list-style: none;
     border: 1px solid $color-black;
     padding: 16px;
     color: $color-black;

@@ -81,5 +81,10 @@ footer {
 .open {
   .opened{
     display: flex !important;
+    list-style: none;
   }
+}
+
+.App {
+  height: 100vh;
 }
